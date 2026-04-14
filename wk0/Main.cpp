@@ -8,7 +8,7 @@
 
 #include <iostream>         // in-out stream, for sending text to the console.
 #include <string>           // for the player name
-using namespace std;        // so we on't have to type "std::" all the time
+using namespace std;        // so we don't have to type "std::" all the time
 
 // this is where the program starts running code.
 int main () {
@@ -24,7 +24,7 @@ string playerName;              // variable names use camelCase
 
     cout << "Hello world!" << playerName << "." << endl; 
    
-   cout << "Hellow world!" << endl; // c out for "console out"
+   cout << "Hello world!" << endl; // c out for "console out"
     //{ end L for "end Line"
 
     return 0;                        // the program finished successfully
@@ -37,7 +37,7 @@ int main() {
     //40 minutes!!!!
 
     //declaring a variable means it exists!
-    //defining a variable meanas giving it a value.
+    //defining a variable means giving it a value.
     int playerAge = -1;             //intergers are whole numbers
     string playerName = "Sally";    // strings ar efor words / Letters
     float playerheight = 1.8f;      // height in meters
