@@ -1,10 +1,12 @@
 // Adi Van Wye
-// Let's create a list of favorites
+// Let's create a list of favorite Games_My first official assignment ⟡ʚɞ ⁺˖ ⸝⸝ ݁  ݁⊹ ₊ ݁..𖥔 ݁ ˖꩜ 
 
+/* 
+    int main() */
 #include <iostream>
-#include<string>
-#include<vector>
-#<algorithm>
+#include <string>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -30,3 +32,38 @@ int main() {
     }
 
 }hw is add a add vector, edit, show, name, vector, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
