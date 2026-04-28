@@ -31,7 +31,7 @@ string playerName;              // variable names use camelCase
 }
 
 int main() {
-    // '\n' or 'backlash n' make sa new line
+    // '\n' or 'backlash n' makes a new line
     cout << "\n\n\nAll about variables and logic!\n\n\n";
 
     //40 minutes!!!!
