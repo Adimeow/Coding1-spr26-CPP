@@ -66,6 +66,9 @@ void setName(string givenName) {
     if(giveName.size() < 5) {
         name = givenName;
     }
+    else {
+        cout << "error: name is too long.\n";
+    }
 }
 
 int main() {
