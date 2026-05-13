@@ -3,7 +3,7 @@
 // May 14
 
 
-// 🌸 Toolbox of Functions
+// 🌸 Toolbox of Functions (includes)🌸
 #include  <iostream>
 #include <string>
 #include <vector>
@@ -13,16 +13,22 @@
 using namespace std;
 
 
-// 🐉  Dragon Build  -- Defining Class ( i chose baby dragons)
+// 🐉  Dragon Build  -- Defining Class ( cute dragon edition 🌸🐉)
 class babyDragon {
+private:
     string name
     int health; 
     int damage;
     int hunger;
 
-    babyDragon() {
-        cout << "You found a baby Dragon!\n";
-        name = "Ember Sprout"
+    public:
+    babyDragon(string Ember Blossom) {
+        cout << "You found a baby Dragon, her name is Ember Blossom!\n";
+        name = "Ember Blossom"
+        health = 10;
+        damage= 3;
+        hunger = 0;
+        listen();            // 
     }
 }
 
@@ -34,17 +40,17 @@ int main() {
 
         getline(cin, input);
 
-        // feed their critter
+        // feed baby dragon
         if (input == "feed") {
             cout << "nom nom\n";
         } 
-        // train their critter (chance to increase health or damage )
+        // train your dragon (chance to increase health or damage )
         else if(input == "train")  {
             cout << "Let's get stronger!\n";
         }  
         // listen to their creature (chance to increase health or damage)
         else if(input == "listen") {
-            cout << "I'm MAD!\n";
+            cout << "RAWR!\n";
         }
         // battle other creatures, with options to
             // attack
