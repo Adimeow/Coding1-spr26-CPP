@@ -1,22 +1,28 @@
-· ˚ ༘ ⋆｡˚ 𝒜𝒹𝒾 𝐹𝓁𝑜𝓇𝒶 𝒱𝒶𝓃 𝒲𝓎𝑒 ˚｡⋆ ༘ ˚ ·
-Coding 1 Final 🐉✨ -- Raising Dragons -- ✨🐉
+// · ˚ ༘ ⋆｡˚ 𝒜𝒹𝒾 𝐹𝓁𝑜𝓇𝒶 𝒱𝒶𝓃 𝒲𝓎𝑒 ˚｡⋆ ༘ ˚ ·
+// ✧˚ · Coding 1 Final — Raising Dragons 🐉✨
+// May 14
 
+
+// 🌸 Toolbox of Functions
 #include  <iostream>
 #include <string>
 #include <vector>
+#include <fstream>          // for reading files?
 #include <ctime>            // for random numbers
 #include <cstdlib>          // for random numbers
-
 using namespace std;
 
-class baseDragon {
+
+// 🐉  Dragon Build  -- Defining Class ( i chose baby dragons)
+class babyDragon {
     string name
     int health; 
     int damage;
+    int hunger;
 
-    baseDragon() {
+    babyDragon() {
         cout << "You found a baby Dragon!\n";
-        name << ""
+        name = "Ember Sprout"
     }
 }
 
