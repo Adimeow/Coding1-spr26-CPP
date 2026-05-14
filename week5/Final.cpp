@@ -26,7 +26,7 @@ private:
     public:
 
 
-    // constructor
+    // constructor  -- a new dragon has hatched
     dragon(string givenName, int givenHealth, int givenDamage) {
     name = givenName;
     health = givenHealth;
@@ -36,7 +36,7 @@ private:
     status();
 }
 
-    // overloaded constructor
+    // overloaded constructor - default
     dragon() {
     name = "myDragon";
     health = 10;
@@ -60,7 +60,7 @@ private:
     void setHunger(int h) { hunger = h; }
     void setAlive(bool a) { isAlive = a; }
 
-    // status
+    // status -- lets you check on dragon
     void status() {
     cout << "\n" << name << "'s Stats:\n";
     cout << "Health: " << health << "\n";
@@ -68,7 +68,7 @@ private:
     cout << "Hunger: " << hunger << "\n\n";
     }   
 
-    // feed
+    // feed -- decrease baby dragons hunger
     void feed() {
         cout << name << " eats happily.\n";
         hunger -= 3;
@@ -94,6 +94,7 @@ private:
 
     cout << name << " trains hard.\n";
 
+    //chance to increase damage or health 
     if (rand() % 2 == 0) {
         damage++;
         cout << "Damage increased!\n";
@@ -102,11 +103,13 @@ private:
         cout << "Health increased!\n";
     }
 
-    hunger++;
+    hunger++;  // but training makes the little dragon hungry
 }
 
-// battle
+// battle -- prepare for trouble attack, heal or run
 void battle(string enemyName, int enemyHealth, int enemyDamage) {
+    // check dragons hunger levels before battle
+
     if (hunger > 10) {
         cout << name << " is too hungry to battle.\n";
         return;
@@ -119,19 +122,19 @@ void battle(string enemyName, int enemyHealth, int enemyDamage) {
     cout << "\n A wild " << enemyName << " appears!\n";
 
     string choice;
-
+            // battle loop
     while (enemyHealth > 0 && health > 0) {
         cout << "Choose: attack / heal / run\n";
         getline(cin, choice);
-
+            //attack enemy
         if (choice == "attack") {
             cout << name << " attacks for " << damage << " damage.\n";
             enemyHealth -= damage;
-        }
+        }   //heal self
         else if (choice == "heal") {
             cout << name << " heals.\n";
             health += 2;
-        }
+        }  // escape
         else if (choice == "run") {
             cout << name << " runs away.\n";
             return;
@@ -157,7 +160,7 @@ void battle(string enemyName, int enemyHealth, int enemyDamage) {
     hunger++;
     }
 
-        // new day
+        // new day increases hunger
         void newDay() {
      hunger += 2;
 };
@@ -180,7 +183,7 @@ return names;
 
 }
 
-// main program
+// main program and game loop
 int main() {
  srand(time(0));
 
@@ -195,7 +198,7 @@ int main() {
 
     string input = "";
     int turns = 0;
-
+    //main game loop
     while (true) {
 
     while (turns < 10) {
@@ -227,17 +230,17 @@ int main() {
 
         turns++;
     }
-
+        // turn reset
         turns = 0;
 
         cout << "Do you want to keep playing?\n";
         getline(cin, input);
 
         if (input == "no") {
-        break;
+        break; // exit game loop
         }
 
-        myDragon.newDay();
+        myDragon.newDay(); //hunger increases
     
     }
 
