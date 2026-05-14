@@ -3,7 +3,7 @@
 
 #include<iostream>
 #include<fstream>        // file steam, include stream and ostream
-#include<string>
+#include<string>         // include stream
 #include<vector>
 
 using namespace std;
