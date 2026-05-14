@@ -62,44 +62,44 @@ private:
 
     // status
     void status() {
-    cout << "\\n" << name << "'s Stats:\\n";
-    cout << "Health: " << health << "\\n";
-    cout << "Damage: " << damage << "\\n";
-    cout << "Hunger: " << hunger << "\\n\\n";
+    cout << "\n" << name << "'s Stats:\n";
+    cout << "Health: " << health << "\n";
+    cout << "Damage: " << damage << "\n";
+    cout << "Hunger: " << hunger << "\n\n";
     }   
 
     // feed
     void feed() {
-        cout << name << " eats happily.\\n";
+        cout << name << " eats happily.\n";
         hunger -= 3;
         if (hunger < 0) hunger = 0;
     }
 
     // listen
     void listen() {
-    cout << name << " makes a happy noise.\\n";
+    cout << name << " makes a happy noise.\n";
     status();
     }
 
     // train
     void train() {
     if (hunger > 10) {
-        cout << name << " is too hungry to train.\\n";
+        cout << name << " is too hungry to train.\n";
         return;
     }
 
     if (hunger > 5) {
-        cout << name << " growls… getting hungry.\\n";
+        cout << name << " growls… getting hungry.\n";
     }
 
-    cout << name << " trains hard.\\n";
+    cout << name << " trains hard.\n";
 
     if (rand() % 2 == 0) {
         damage++;
-        cout << "Damage increased!\\n";
+        cout << "Damage increased!\n";
     } else {
         health++;
-        cout << "Health increased!\\n";
+        cout << "Health increased!\n";
     }
 
     hunger++;
@@ -108,50 +108,50 @@ private:
 // battle
 void battle(string enemyName, int enemyHealth, int enemyDamage) {
     if (hunger > 10) {
-        cout << name << " is too hungry to battle.\\n";
+        cout << name << " is too hungry to battle.\n";
         return;
     }
 
     if (hunger > 5) {
-        cout << name << " growls… getting hungry.\\n";
+        cout << name << " growls… getting hungry.\n";
     }
 
-    cout << "\\nA wild " << enemyName << " appears!\\n";
+    cout << "\n A wild " << enemyName << " appears!\n";
 
     string choice;
 
     while (enemyHealth > 0 && health > 0) {
-        cout << "Choose: attack / heal / run\\n";
+        cout << "Choose: attack / heal / run\n";
         getline(cin, choice);
 
         if (choice == "attack") {
-            cout << name << " attacks for " << damage << " damage.\\n";
+            cout << name << " attacks for " << damage << " damage.\n";
             enemyHealth -= damage;
         }
         else if (choice == "heal") {
-            cout << name << " heals.\\n";
+            cout << name << " heals.\n";
             health += 2;
         }
         else if (choice == "run") {
-            cout << name << " runs away.\\n";
+            cout << name << " runs away.\n";
             return;
         }
         else {
-            cout << "Invalid choice.\\n";
+            cout << "Invalid choice.\n";
             continue;
         }
 
         if (enemyHealth > 0) {
-            cout << enemyName << " attacks for " << enemyDamage << " damage.\\n";
+            cout << enemyName << " attacks for " << enemyDamage << " damage.\n";
             health -= enemyDamage;
         }
     }
 
     if (health <= 0) {
-        cout << name << " has fallen.\\n";
+        cout << name << " has fallen.\n";
         isAlive = false;
     } else {
-        cout << name << " defeated " << enemyName << "!\\n";
+        cout << name << " defeated " << enemyName << "!\n";
     }
 
     hunger++;
@@ -198,9 +198,9 @@ int main() {
 
     while (true) {
 
-    while (turns < 3) {
-        cout << "What would you like to do?\\n";
-        cout << "feed / train / listen / battle / status\\n";
+    while (turns < 10) {
+        cout << "What would you like to do?\n";
+        cout << "feed / train / listen / battle / status\n";
 
         getline(cin, input);
 
@@ -221,7 +221,8 @@ int main() {
             myDragon.status();
         }
         else {
-            cout << "Invalid command.\\n";
+            cout << "Invalid command.\n";
+            continue;
         }
 
         turns++;
@@ -229,7 +230,7 @@ int main() {
 
         turns = 0;
 
-        cout << "Do you want to keep playing?\\n";
+        cout << "Do you want to keep playing?\n";
         getline(cin, input);
 
         if (input == "no") {
