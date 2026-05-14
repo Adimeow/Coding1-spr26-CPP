@@ -13,7 +13,7 @@
 using namespace std;
 
 
-// 🐉  Dragon Build  -- Defining Class ( cute dragon edition 🌸🐉)
+// 🐉  Dragon Build  -- Defining Class ( (*ᴗ͈ˬᴗ͈)ꕤ*.ﾟcute dragon edition 🌸🐉)
 class babyDragon {
 private:
     string name;
@@ -23,32 +23,45 @@ private:
     int boredom;
 
     public:
+
     // constructor sets up baby dragon when it hatches!
     // a constructor function
-    babyDragon(string givenName) {
-        cout << "You found a baby Dragon, her name is << givenName << !\n";
+    babyDragon(string givenName, into giveHealth, int giveDamage) {
+        cout << "You found a baby Dragon, her name is << givenName << ˙𐃷˙!\n";
         name = givenName;
-        health = 10;
-        damage= 3;
+        health = giveHealth;
+        damage= giveDamage;
         hunger = 0;
         boredom=0;
-        listen();            // 
+        status();            // 
     }
 }
 
-// (status) Listen to your dragon!
-void listen () {
-    cout << "\n♡ " << emberBlossom << ";s Stats ♡\n";
+// overload the constructor (notes from previous class)
+dragon() {
+    name = "Emberblossom";
+    health = 10
+    damage = 3;
+    hunger = 0;
+    boredom = 0;
+    status();
+
+}
+
+// Learn about your baby dragon
+void status () {
+    cout << "\n♡ " << giveName << ";s Stats ♡\n";
     cout << "Health : " << health << "\n";
     cout << "Damage : " << damage << "\n";
     cout << "Hunger : " << hunger << "\n";
     cout << "Boredom: " << boredom << "\n\n";
+
 }
 
 // feed your baby dragon
 void feed() {
-    cout << emberBlossom << " eats gold and rubys nom nom (˶ᵔ ᵕ ᵔ˶) ♡\n"; 
-    hunger = max(0, hunger -3);
+    cout << giveName << " eats gemstones! nom nom (๑ᵔ⤙ᵔ๑)♡\n"; 
+    hunger = -2;
 }
 
 //train your dragon
@@ -63,7 +76,7 @@ void train() {
 void battle() {
    
     cout << "I'm " <<  << ", with " << health << " health ";
-    cout << " and " << damage << " damage.\n";
+    cout << " and " << damage << " damage *ੈ🐉 ༘⋆໋✧˚.\n";
     
 }
 
@@ -74,7 +87,7 @@ int main() {
     //your dragon has opalescent scales and is named Ember Blossom
     babyDragon 
 
-    cout << "Welcome to raising your Pet Dragon!"\n;
+    cout << "Welcome to raising your Pet Dragon!\n"; 
 
     while(true) {
         cout << "What would you like to do?\n";
@@ -83,7 +96,7 @@ int main() {
 
         // feed baby dragon
         if (input == "feed") {
-            cout << "nom nom\n";
+            cout << "nom nom💎\n";
         } 
         // train your dragon (chance to increase health or damage )
         else if(input == "train")  {
@@ -91,7 +104,7 @@ int main() {
         }  
         // listen to their creature (chance to increase health or damage)
         else if(input == "listen") {
-            cout << "RAWR!\n";
+            cout << "RAWR˙ᵕ˙!\n";
         }
         // battle other creatures, with options to
             // attack
