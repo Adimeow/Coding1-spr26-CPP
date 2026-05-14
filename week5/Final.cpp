@@ -108,7 +108,7 @@ private:
 
 // battle -- prepare for trouble attack, heal or run
 void battle(string enemyName, int enemyHealth, int enemyDamage) {
-    // check dragons hunger levels before battle
+    // check dragons hunger levels before battle and thrive on a healthy diet of gems
 
     if (hunger > 10) {
         cout << name << " is too hungry to battle.\n";
@@ -126,7 +126,7 @@ void battle(string enemyName, int enemyHealth, int enemyDamage) {
     while (enemyHealth > 0 && health > 0) {
         cout << "Choose: attack / heal / run\n";
         getline(cin, choice);
-            //attack enemy
+            //attack enemy (ง •̀_•́)ง‼
         if (choice == "attack") {
             cout << name << " attacks for " << damage << " damage.\n";
             enemyHealth -= damage;
@@ -160,7 +160,7 @@ void battle(string enemyName, int enemyHealth, int enemyDamage) {
     hunger++;
     }
 
-        // new day increases hunger
+        // new day increases hunger, baby dragons getting bigger! ଘ(∩^o^)⊃━☆゜
         void newDay() {
      hunger += 2;
 };
@@ -206,7 +206,7 @@ int main() {
         cout << "feed / train / listen / battle / status\n";
 
         getline(cin, input);
-
+            // time to eat omnomnom(๑´ㅂ`๑)nomnomnom
         if (input == "feed") {
             myDragon.feed();
         }
@@ -237,7 +237,7 @@ int main() {
         getline(cin, input);
 
         if (input == "no") {
-        break; // exit game loop
+        break; // exit game loop ⏾⋆.˚
         }
 
         myDragon.newDay(); //hunger increases
